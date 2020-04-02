@@ -1,0 +1,125 @@
+> INFO  20:58:13.187 main com.joe.test.Main
+  Tallac BlackList Version: 1.0.0.0
+> INFO  20:58:13.308 main net.floodlightcontroller.core.internal.Controller
+  Controller role set to null
+> DEBUG 20:58:13.329 main com.joe.test.module.FlowMgr
+  Initialize BlackList flow manager.
+> DEBUG 20:58:13.331 main com.joe.test.module.MessageListener
+  Initialize BlackList OpenFlow message listener.
+> DEBUG 20:58:13.332 main com.joe.test.module.BlacklistMgr
+  Read configured blacklist' records.
+> DEBUG 20:58:13.333 main com.joe.test.module.BlacklistMgr
+  Read DNS blacklist. File dnsBlacklist.txt
+> ERROR 20:58:13.333 main com.joe.test.module.BlacklistMgr
+  File "dnsBlacklist.txt" not found.
+> DEBUG 20:58:13.334 main com.joe.test.module.BlacklistMgr
+  DNS blacklist:
+
+> DEBUG 20:58:13.334 main com.joe.test.module.BlacklistMgr
+  Read IPv4 blacklist. File ipv4Blacklist.txt
+> DEBUG 20:58:13.336 main com.joe.test.module.BlacklistMgr
+  Ipv4 blacklist:
+8.8.8.8
+
+> INFO  20:58:13.342 pool-3-thread-1 com.joe.test.module.StatisticsMgr
+  IPv4 Statistics: No IPv4 matches.
+  DNS Statistics: No DNS matches.
+> DEBUG 20:58:13.356 main com.joe.test.module.MessageListener
+  Register BlackList OpenFlow PacketIn message listener.
+> INFO  20:58:13.509 main org.restlet.Component.InternalRouter.Server
+  Starting the Simple [HTTP/1.1] server on port 8080
+> INFO  20:58:13.578 main net.floodlightcontroller.core.internal.Controller
+  Listening for switch connections on 0.0.0.0/0.0.0.0:6633
+> INFO  20:58:44.694 New I/O server worker #1-1 net.floodlightcontroller.core.internal.Controller
+  New switch connection from /127.0.0.1:48266
+> INFO  20:58:44.733 New I/O server worker #1-2 net.floodlightcontroller.core.internal.Controller
+  New switch connection from /127.0.0.1:48268
+> INFO  20:58:44.733 New I/O server worker #1-1 net.floodlightcontroller.core.internal.Controller
+  Disconnected switch OFSwitchImpl [/127.0.0.1:48266 DPID[?]]
+> DEBUG 20:58:44.767 main com.joe.test.module.SwitchListener
+  Set default flows on switch OFSwitchImpl [/127.0.0.1:48268 DPID[00:00:00:00:00:00:00:01]]
+> INFO  20:58:44.779 main com.joe.test.module.FlowMgr
+  Flow OFFlowMod [actionFactory=null, actions=[OFActionOutput [maxLength=-1, port=65533, length=8, type=OUTPUT]], bufferId=-1, command=0, cookie=0, flags=0, hardTimeout=0, idleTimeout=0, match=OFMatch[dl_type=0x800,nw_proto=17,tp_dst=53], outPort=-1, priority=2000, length=80, type=FLOW_MOD, version=1, xid=2] is set on switch 1
+> INFO  20:58:44.780 main com.joe.test.module.FlowMgr
+  Flow OFFlowMod [actionFactory=null, actions=[OFActionOutput [maxLength=-1, port=65533, length=8, type=OUTPUT]], bufferId=-1, command=0, cookie=0, flags=0, hardTimeout=0, idleTimeout=0, match=OFMatch[dl_type=0x800], outPort=-1, priority=1000, length=80, type=FLOW_MOD, version=1, xid=3] is set on switch 1
+> INFO  20:58:44.780 main com.joe.test.module.FlowMgr
+  Flow OFFlowMod [actionFactory=null, actions=[OFActionOutput [maxLength=-1, port=65530, length=8, type=OUTPUT]], bufferId=-1, command=0, cookie=0, flags=0, hardTimeout=0, idleTimeout=0, match=OFMatch[dl_type=0x806], outPort=-1, priority=1500, length=80, type=FLOW_MOD, version=1, xid=4] is set on switch 1
+> INFO  20:59:11.699 New I/O server worker #1-2 com.joe.test.module.PacketHandler
+  --[PacketHandler forwardPacket] sending packet out port:2
+> INFO  20:59:11.699 New I/O server worker #1-2 com.joe.test.module.FlowMgr
+  Flow OFFlowMod [actionFactory=null, actions=[OFActionOutput [maxLength=-1, port=2, length=8, type=OUTPUT]], bufferId=-1, command=0, cookie=0, flags=0, hardTimeout=0, idleTimeout=15, match=OFMatch[dl_type=0x800,nw_dst=10.0.0.2], outPort=-1, priority=1500, length=80, type=FLOW_MOD, version=1, xid=5] is set on switch 1
+> INFO  20:59:11.700 New I/O server worker #1-2 com.joe.test.module.PacketHandler
+  --[PacketHandler forwardPacket] sending packet out port:1
+> INFO  20:59:11.701 New I/O server worker #1-2 com.joe.test.module.FlowMgr
+  Flow OFFlowMod [actionFactory=null, actions=[OFActionOutput [maxLength=-1, port=1, length=8, type=OUTPUT]], bufferId=-1, command=0, cookie=0, flags=0, hardTimeout=0, idleTimeout=15, match=OFMatch[dl_type=0x800,nw_dst=10.0.0.1], outPort=-1, priority=1500, length=80, type=FLOW_MOD, version=1, xid=6] is set on switch 1
+> INFO  20:59:13.342 pool-3-thread-1 com.joe.test.module.StatisticsMgr
+  IPv4 Statistics: No IPv4 matches.
+  DNS Statistics: No DNS matches.
+> DEBUG 20:59:35.139 Dispatcher-0 com.joe.test.api.BlacklistIpv4ConfigResource
+  Received REST GET IP blacklist config.
+> INFO  21:00:13.342 pool-3-thread-1 com.joe.test.module.StatisticsMgr
+  IPv4 Statistics: No IPv4 matches.
+  DNS Statistics: No DNS matches.
+> DEBUG 21:01:01.567 main com.joe.test.module.SwitchListener
+  Switch 1 port changed
+> DEBUG 21:01:01.613 main com.joe.test.module.SwitchListener
+  Switch 1 port changed
+> DEBUG 21:01:01.670 main com.joe.test.module.SwitchListener
+  Switch OFSwitchImpl [/127.0.0.1:48268 DPID[00:00:00:00:00:00:00:01]] disconnected
+> INFO  21:01:01.670 New I/O server worker #1-2 net.floodlightcontroller.core.internal.Controller
+  Disconnected switch OFSwitchImpl [/127.0.0.1:48268 DPID[00:00:00:00:00:00:00:01]]
+> INFO  21:01:13.342 pool-3-thread-1 com.joe.test.module.StatisticsMgr
+  IPv4 Statistics: No IPv4 matches.
+  DNS Statistics: No DNS matches.
+> INFO  21:01:22.373 New I/O server worker #1-3 net.floodlightcontroller.core.internal.Controller
+  New switch connection from /127.0.0.1:48824
+> INFO  21:01:22.373 New I/O server worker #1-3 net.floodlightcontroller.core.internal.Controller
+  Disconnected switch OFSwitchImpl [/127.0.0.1:48824 DPID[?]]
+> INFO  21:01:23.493 New I/O server worker #1-4 net.floodlightcontroller.core.internal.Controller
+  New switch connection from /127.0.0.1:48828
+> DEBUG 21:01:23.499 main com.joe.test.module.SwitchListener
+  Set default flows on switch OFSwitchImpl [/127.0.0.1:48828 DPID[00:00:00:00:00:00:00:01]]
+> INFO  21:01:23.500 main com.joe.test.module.FlowMgr
+  Flow OFFlowMod [actionFactory=null, actions=[OFActionOutput [maxLength=-1, port=65533, length=8, type=OUTPUT]], bufferId=-1, command=0, cookie=0, flags=0, hardTimeout=0, idleTimeout=0, match=OFMatch[dl_type=0x800,nw_proto=17,tp_dst=53], outPort=-1, priority=2000, length=80, type=FLOW_MOD, version=1, xid=2] is set on switch 1
+> INFO  21:01:23.500 main com.joe.test.module.FlowMgr
+  Flow OFFlowMod [actionFactory=null, actions=[OFActionOutput [maxLength=-1, port=65533, length=8, type=OUTPUT]], bufferId=-1, command=0, cookie=0, flags=0, hardTimeout=0, idleTimeout=0, match=OFMatch[dl_type=0x800], outPort=-1, priority=1000, length=80, type=FLOW_MOD, version=1, xid=3] is set on switch 1
+> INFO  21:01:23.500 main com.joe.test.module.FlowMgr
+  Flow OFFlowMod [actionFactory=null, actions=[OFActionOutput [maxLength=-1, port=65530, length=8, type=OUTPUT]], bufferId=-1, command=0, cookie=0, flags=0, hardTimeout=0, idleTimeout=0, match=OFMatch[dl_type=0x806], outPort=-1, priority=1500, length=80, type=FLOW_MOD, version=1, xid=4] is set on switch 1
+> DEBUG 21:01:23.502 main com.joe.test.module.SwitchListener
+  Switch 1 port changed
+> INFO  21:01:33.028 New I/O server worker #1-4 com.joe.test.module.PacketHandler
+  IPv4 packet to 8.8.8.8 dropped.
+> DEBUG 21:01:33.029 New I/O server worker #1-4 com.joe.test.module.FlowMgr
+  Drop packet
+> INFO  21:01:34.029 New I/O server worker #1-4 com.joe.test.module.PacketHandler
+  IPv4 packet to 8.8.8.8 dropped.
+> DEBUG 21:01:34.030 New I/O server worker #1-4 com.joe.test.module.FlowMgr
+  Drop packet
+> INFO  21:01:35.054 New I/O server worker #1-4 com.joe.test.module.PacketHandler
+  IPv4 packet to 8.8.8.8 dropped.
+> DEBUG 21:01:35.054 New I/O server worker #1-4 com.joe.test.module.FlowMgr
+  Drop packet
+> INFO  21:01:36.078 New I/O server worker #1-4 com.joe.test.module.PacketHandler
+  IPv4 packet to 8.8.8.8 dropped.
+> DEBUG 21:01:36.078 New I/O server worker #1-4 com.joe.test.module.FlowMgr
+  Drop packet
+> INFO  21:01:37.102 New I/O server worker #1-4 com.joe.test.module.PacketHandler
+  IPv4 packet to 8.8.8.8 dropped.
+> DEBUG 21:01:37.102 New I/O server worker #1-4 com.joe.test.module.FlowMgr
+  Drop packet
+> INFO  21:01:38.126 New I/O server worker #1-4 com.joe.test.module.PacketHandler
+  IPv4 packet to 8.8.8.8 dropped.
+> DEBUG 21:01:38.126 New I/O server worker #1-4 com.joe.test.module.FlowMgr
+  Drop packet
+> INFO  21:01:39.149 New I/O server worker #1-4 com.joe.test.module.PacketHandler
+  IPv4 packet to 8.8.8.8 dropped.
+> DEBUG 21:01:39.150 New I/O server worker #1-4 com.joe.test.module.FlowMgr
+  Drop packet
+> INFO  21:01:40.174 New I/O server worker #1-4 com.joe.test.module.PacketHandler
+  IPv4 packet to 8.8.8.8 dropped.
+> DEBUG 21:01:40.175 New I/O server worker #1-4 com.joe.test.module.FlowMgr
+  Drop packet
+> INFO  21:01:41.198 New I/O server worker #1-4 com.joe.test.module.PacketHandler
+  IPv4 packet to 8.8.8.8 dropped.
+> DEBUG 21:01:41.198 New I/O server worker #1-4 com.joe.test.module.FlowMgr
+  Drop packet

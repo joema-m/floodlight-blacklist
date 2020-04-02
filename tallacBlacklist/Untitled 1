@@ -1,0 +1,14 @@
+API:
+
+GET:
+http://127.0.0.1:8080/tallac/api/blacklist/stats/details
+
+http://127.0.0.1:8080/tallac/api/blacklist/stats
+
+http://127.0.0.1:8080/tallac/api/blacklist/sites/dns
+
+http://127.0.0.1:8080/tallac/api/blacklist/sites/ip
+
+
+curl -X POST  http://127.0.0.1:8080/tallac/api/blacklist/sites/ip {"record":"192.168.1.1","id":"192.168.1.1"}]
+
